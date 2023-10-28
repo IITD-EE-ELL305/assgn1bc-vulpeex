@@ -41,15 +41,15 @@ This will make the later part of this assignment easier for you.
 
 1. Implement the load and store instructions
 - [X] load
-  - [ ] Add a data memory (DMEM) to load (store) data from (to)
-  - [ ] Connect the output from ALU to the address bus of the data memory
-  - [ ] You want to write back the data from that address, so you will have to add a Mux with ALU and DMEM_R_data as inputs and add an appropriate control signal to choose which one to write back
-  - [ ] Appropriately modify the writeback path
-  - [ ] **Commit and push to Github with message "load instruction"**
+  - [X] Add a data memory (DMEM) to load (store) data from (to)
+  - [X] Connect the output from ALU to the address bus of the data memory
+  - [X] You want to write back the data from that address, so you will have to add a Mux with ALU and DMEM_R_data as inputs and add an appropriate control signal to choose which one to write back
+  - [X] Appropriately modify the writeback path
+  - [X] **Commit and push to Github with message "load instruction"**
 - [X] store
-  - [ ] To store rd data into memory, it has to be connected to the write port of DMEM
-  - [ ] Provide appropriate control signal to correctly enable DMEM memory write for store instruction
-  - [ ] Modify the control circuit to generate the control signal, and the main circuit to use the modified control circuit
+  - [X] To store rd data into memory, it has to be connected to the write port of DMEM
+  - [X] Provide appropriate control signal to correctly enable DMEM memory write for store instruction
+  - [X] Modify the control circuit to generate the control signal, and the main circuit to use the modified control circuit
 - [ ] Test
   - [ ] Store some data to DMEM using the store instruction and see the contents of DMEM to check if it is there
   - [ ] Load data from the same location into a register (choose form among the first 5 registers in regfile)  
