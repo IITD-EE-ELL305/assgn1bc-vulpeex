@@ -50,11 +50,11 @@ This will make the later part of this assignment easier for you.
   - [X] To store rd data into memory, it has to be connected to the write port of DMEM
   - [X] Provide appropriate control signal to correctly enable DMEM memory write for store instruction
   - [X] Modify the control circuit to generate the control signal, and the main circuit to use the modified control circuit
-- [ ] Test
-  - [ ] Store some data to DMEM using the store instruction and see the contents of DMEM to check if it is there
-  - [ ] Load data from the same location into a register (choose form among the first 5 registers in regfile)  
+- [x] Test
+  - [x] Store some data to DMEM using the store instruction and see the contents of DMEM to check if it is there
+  - [x] Load data from the same location into a register (choose form among the first 5 registers in regfile)  
         *Checking register values: Under the 'Simulate' menu you will find "Timing diagram". Open that and click on the 'Add or remove signals' button. Expand "REGFILE" and select r1...r5 (whichever register you stored to). Now when you simulate, you can directly see the value of the registers at each time step.
-  - [ ] **Commit and push to Github with message "store instruction"**
+  - [x] **Commit and push to Github with message "store instruction"**
 2. Add support for branch and call instructions
 - [x] We will only implement the _beq_ instruction in a slightly simplified format:  
       Use only the last 18 bits as the offset (same as for load and store). That way you do not need to modify the immediate generation circuit.
@@ -62,38 +62,38 @@ This will make the later part of this assignment easier for you.
   - [x] Add the corresponding control signal
   - [x] Take the ALU output and put it back into PC through a Mux
   - [x] Add the correct control signal depending on the Flags register to choose the correct input to PC
-- [ ] Test
-  - [ ] Load some value to two registers
-  - [ ] Run the compare instruction to compare them and save the result in the Flags register
-  - [ ] Run the branch instruction to make the PC jump to a positive and negative offset
-  - [ ] You can simply check the value of _PC_ to see if your circuit works correctly
-  - [ ] **Commit and push to Github with message "beq instruction"**
+- [x] Test
+  - [x] Load some value to two registers
+  - [x] Run the compare instruction to compare them and save the result in the Flags register
+  - [x] Run the branch instruction to make the PC jump to a positive and negative offset
+  - [x] You can simply check the value of _PC_ to see if your circuit works correctly
+  - [x] **Commit and push to Github with message "beq instruction"**
 - [x] call instruction
   - [x] Add the _ra_ register which will hold PC+4; The remaining hardware is the same as for branch
   - [x] Add appropriate control signals to enable write to _ra_ and choose the new _PC_
 - [x] ret instruction
   - [x] You simply have to load _ra_ into PC, so add a connection from output of _ra_ tp input of _PC_ through the Mux (you will have to expand the Mux and modify the control signals)
-- [ ] Test
-  - [ ] Load 2 numbers in the regfile, then call a function that will add them and store result in regfile and return, then store that result in data memory
-  - [ ] Check data memory for the correct result, and also verify that the PC behaves correctly through the call and return instructions
-  - [ ] **Commit and push to Github with message "call and ret instructions"**
+- [x] Test
+  - [x] Load 2 numbers in the regfile, then call a function that will add them and store result in regfile and return, then store that result in data memory
+  - [x] Check data memory for the correct result, and also verify that the PC behaves correctly through the call and return instructions
+  - [x] **Commit and push to Github with message "call and ret instructions"**
 3. Add support for _nop_ and _halt_ instructions
 - [x] Do you need any hardware modification?
 - [x] Modify the control signals appropriately for _nop_
 - [x] With the _halt_ instruction, the _PC_ stops incrementing. Do you need hardware modification?
 - [x] Add appropriate control signals
 - [x] **Commit and push to Github with message "halt and nop instruction"**
-- [ ] Write a small test program for all your instructions:
-  - [ ] Load two numbers into r1 and r2
-  - [ ] Add the two numbers and store result in r3
-  - [ ] Compare that with your 'manual' addition (supplied as an _imm_ to _cmp__
-  - [ ] If result is correct write 0x0 to r4 and skip next instruction; else branch to the next instruction and write 0xFFFFFFFF (all 1s) to r4
-  - [ ] Call a new function that stores the value from r4 to the data memory
-  - [ ] Return from the call
-  - [ ] Load value from data memory to r5
-  - [ ] Halt the CPU
-  - [ ] Check values of all relevant registers to ensure that the CPU is working as expected
-- [ ] **Commit and push to Github with message "assignment 1b final" only once you are fully sure and do not make edits after this**
+- [x] Write a small test program for all your instructions:
+  - [x] Load two numbers into r1 and r2
+  - [x] Add the two numbers and store result in r3
+  - [x] Compare that with your 'manual' addition (supplied as an _imm_ to _cmp__
+  - [x] If result is correct write 0x0 to r4 and skip next instruction; else branch to the next instruction and write 0xFFFFFFFF (all 1s) to r4
+  - [x] Call a new function that stores the value from r4 to the data memory
+  - [x] Return from the call
+  - [x] Load value from data memory to r5
+  - [x] Halt the CPU
+  - [x] Check values of all relevant registers to ensure that the CPU is working as expected
+- [x] **Commit and push to Github with message "assignment 1b final" only once you are fully sure and do not make edits after this**
      
   **End of assignment 1b. Due date: 28/10/2023**
 
